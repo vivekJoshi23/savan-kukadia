@@ -1,0 +1,17 @@
+# Rehabilitation Recover Health
+
+Online medical clinic offering doctor, physiotherapy and dietitian consultations via WhatsApp and Google Meet, every day after 5 PM.
+
+## Services
+- Doctor consultation (₹300): Dr Savan Kukadia, MBBS MD, Consultant Physician — chronic disease, diabetes, hypertension, thyroid
+- Physiotherapy (₹300): Dr Roshani Tank, MPT — live online physiotherapy, rehabilitation, pain management
+- Dietitian (₹300, or ₹1,000 for 4 sessions): Dr Roshani Tank — nutrition planning, weight management, diabetes diet
+
+## Contact
+- Website: https://rrhclinic.in
+- Email: rehabrecoverhealth@gmail.com
+- Instagram: @rehab_recover_health
+- WhatsApp: https://wa.me/919510355464
+
+## Hours
+Every day after 5:00 PM IST
