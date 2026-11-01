@@ -3,16 +3,188 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+<!-- Primary SEO -->
 <title>Rehabilitation Recover Health — Online Doctor, Physiotherapy &amp; Dietitian</title>
 <meta name="description" content="Online consultations with a physician, physiotherapist and dietitian — including live online physiotherapy sessions. Every day after 5 PM via WhatsApp or Google Meet." />
-<meta property="og:title" content="Rehabilitation Recover Health — Care from home" />
-<meta property="og:description" content="Consultant physician, physiotherapist and dietitian consultations online, every day after 5 PM." />
+<meta name="keywords" content="online doctor consultation India, online physiotherapy, online dietitian, chronic disease management, diabetes doctor online, online medical consultation Gujarat, physiotherapy from home, online nutrition consultation India" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Rehabilitation Recover Health" />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://rrhclinic.in/" />
+
+<!-- Open Graph -->
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://rrhclinic.in/" />
+<meta property="og:title" content="Rehabilitation Recover Health — Online Doctor, Physiotherapy &amp; Dietitian" />
+<meta property="og:description" content="Online consultations with a physician, physiotherapist and dietitian — every day after 5 PM via WhatsApp or Google Meet. ₹300 per consultation." />
+<meta property="og:image" content="https://rrhclinic.in/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:site_name" content="Rehabilitation Recover Health" />
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Rehabilitation Recover Health — Online Doctor, Physiotherapy &amp; Dietitian" />
+<meta name="twitter:description" content="Online consultations with a physician, physiotherapist and dietitian — every day after 5 PM via WhatsApp or Google Meet. ₹300 per consultation." />
+<meta name="twitter:image" content="https://rrhclinic.in/og-image.jpg" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" />
+
+<!-- Schema.org: Medical Clinic -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Rehabilitation Recover Health",
+  "url": "https://rrhclinic.in",
+  "logo": "https://rrhclinic.in/og-image.jpg",
+  "description": "Online medical consultations with a physician, physiotherapist and dietitian every day after 5 PM via WhatsApp or Google Meet.",
+  "email": "rehabrecoverhealth@gmail.com",
+  "sameAs": ["https://www.instagram.com/rehab_recover_health"],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "17:00",
+    "closes": "22:00"
+  },
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Online Doctor Consultation",
+      "description": "Medical assessment, prescriptions and chronic disease care with Dr Savan Kukadia, MBBS MD.",
+      "offers": {
+        "@type": "Offer",
+        "price": "300",
+        "priceCurrency": "INR"
+      }
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Online Physiotherapy",
+      "description": "Live one-on-one guided physiotherapy sessions and rehabilitation with Dr Roshani Tank, MPT.",
+      "offers": {
+        "@type": "Offer",
+        "price": "300",
+        "priceCurrency": "INR"
+      }
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Online Dietitian Consultation",
+      "description": "Personalized diet and nutrition planning for diabetes, weight management and lifestyle goals with Dr Roshani Tank.",
+      "offers": {
+        "@type": "Offer",
+        "price": "300",
+        "priceCurrency": "INR"
+      }
+    }
+  ],
+  "staff": [
+    {
+      "@type": "Physician",
+      "name": "Dr Savan Kukadia",
+      "description": "MBBS, MD — Consultant Physician with 5+ years clinical experience in chronic disease, diabetes, hypertension and thyroid management.",
+      "identifier": "G 74451"
+    },
+    {
+      "@type": "Person",
+      "name": "Dr Roshani Tank",
+      "description": "MPT — Physiotherapist and Dietitian with 3+ years clinical experience in rehabilitation and nutrition.",
+      "identifier": "GPC 17106"
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org: FAQ Page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is an online consultation as good as visiting a clinic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For many needs — follow-ups, chronic disease review, diet planning and guided physiotherapy exercises — an online consultation works very well. Some problems need physical examination or urgent care; we will guide you to local care if that is the case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does an online doctor consultation cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Doctor, physiotherapy and dietitian consultations are ₹300 each. A package of 4 dietitian consultations is ₹1,000 (saving ₹200)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When can I book an online consultation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Consultations are available every day after 5:00 PM IST, including weekends, via WhatsApp or Google Meet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I pay for an online consultation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Payment is ₹300 per consultation. The payment QR code and UPI details are provided inside the consultation form. Pay by UPI (Google Pay, PhonePe or any UPI app), then submit the form to confirm your slot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I need for an online consultation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A smartphone or computer with video and internet connection, and a quiet space. For physiotherapy, enough room to move is helpful. Family members are welcome to join."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I get a prescription or diet plan online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, when clinically appropriate. After your consultation you receive your prescription, diet plan, or physiotherapy and rehabilitation program as applicable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who are the doctors at Rehabilitation Recover Health?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dr Savan Kukadia (MBBS, MD) is a Consultant Physician with 5+ years experience. Dr Roshani Tank (MPT) is a Physiotherapist and Dietitian with 3+ years experience."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org: Website -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Rehabilitation Recover Health",
+  "url": "https://rrhclinic.in",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://rrhclinic.in/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 <style>
   :root {
     --background: oklch(0.975 0.012 85);
