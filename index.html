@@ -1,5 +1,3 @@
-here is my code 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -436,25 +434,6 @@ h1,h2,h3,p,li,a,span,blockquote{overflow-wrap:break-word;word-break:normal}
   .doctor-head > div{min-width:0}
   .brand{font-size:1rem}
 }
-
-/* ---- YouTube section ---- */
-.yt-section{max-width:72rem;margin:0 auto;padding:6rem 1.25rem;}
-.yt-grid{margin-top:3rem;display:grid;gap:1.5rem;}
-@media(min-width:640px){.yt-grid{grid-template-columns:repeat(2,1fr);}}
-@media(min-width:1024px){.yt-grid{grid-template-columns:repeat(3,1fr);}}
-.yt-card{border-radius:1.25rem;overflow:hidden;border:1px solid var(--border);background:var(--card);}
-.yt-card-thumb{position:relative;display:block;aspect-ratio:9/16;overflow:hidden;background:#000;}
-.yt-card-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
-.yt-card-thumb:hover img{transform:scale(1.04);}
-.yt-play-btn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
-.yt-play-btn svg{filter:drop-shadow(0 2px 8px rgba(0,0,0,.5));transition:transform .2s;}
-.yt-card-thumb:hover .yt-play-btn svg{transform:scale(1.12);}
-.yt-card-info{padding:1rem 1.25rem 1.25rem;}
-.yt-card-info h3{font-size:.9375rem;font-weight:600;line-height:1.4;color:var(--foreground);}
-.yt-cta{margin-top:2.5rem;display:flex;justify-content:center;}
-.btn-yt{background:#FF0000;color:#fff;display:inline-flex;align-items:center;gap:.6rem;border-radius:999px;padding:.75rem 1.75rem;font-weight:700;font-size:.9375rem;text-decoration:none;transition:opacity .15s;}
-.btn-yt:hover{opacity:.85;}
-.btn-yt svg{flex-shrink:0;}
 </style>
 </head>
 <body>
@@ -471,7 +450,6 @@ h1,h2,h3,p,li,a,span,blockquote{overflow-wrap:break-word;word-break:normal}
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
       <a href="#team">Team</a>
-      <a href="#videos">Videos</a>
       <a href="#contact">Contact</a>
       <a class="btn" href="#consultations">Book</a>
     </div>
@@ -489,7 +467,6 @@ h1,h2,h3,p,li,a,span,blockquote{overflow-wrap:break-word;word-break:normal}
     <a href="#reviews">Reviews</a>
     <a href="#faq">FAQ</a>
       <a href="#team">Team</a>
-    <a href="#videos">Videos</a>
     <a href="#contact">Contact</a>
     <a class="btn" href="#consultations">Book consultation</a>
   </div>
@@ -847,106 +824,6 @@ h1,h2,h3,p,li,a,span,blockquote{overflow-wrap:break-word;word-break:normal}
 
 
 
-
-<section id="videos">
-  <div class="yt-section">
-    <p class="eyebrow">Our Channel</p>
-    <h2>Health Videos on YouTube</h2>
-    <p style="margin-top:.75rem;color:var(--muted-foreground);max-width:40rem;">
-      Watch expert tips on physiotherapy, chronic disease management, nutrition and rehabilitation — from Dr Savan Kukadia and Dr Roshani Tank.
-    </p>
-
-    <div class="yt-grid">
-
-      <div class="yt-card">
-        <a class="yt-card-thumb" href="https://youtube.com/shorts/Qy9-Zh3JbYg" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.ytimg.com/vi/Qy9-Zh3JbYg/hqdefault.jpg" alt="Health Tip #1" loading="lazy">
-          <div class="yt-play-btn">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/>
-              <path d="M23 20l14 8-14 8V20z" fill="#fff"/>
-            </svg>
-          </div>
-        </a>
-        <div class="yt-card-info"><h3>Health Tip #1</h3></div>
-      </div>
-
-      <div class="yt-card">
-        <a class="yt-card-thumb" href="https://youtube.com/shorts/FHZ4WHeCDjY" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.ytimg.com/vi/FHZ4WHeCDjY/hqdefault.jpg" alt="Health Tip #2" loading="lazy">
-          <div class="yt-play-btn">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/>
-              <path d="M23 20l14 8-14 8V20z" fill="#fff"/>
-            </svg>
-          </div>
-        </a>
-        <div class="yt-card-info"><h3>Health Tip #2</h3></div>
-      </div>
-
-      <div class="yt-card">
-        <a class="yt-card-thumb" href="https://youtube.com/shorts/IlqT9VQZDIo" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.ytimg.com/vi/IlqT9VQZDIo/hqdefault.jpg" alt="Health Tip #3" loading="lazy">
-          <div class="yt-play-btn">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/>
-              <path d="M23 20l14 8-14 8V20z" fill="#fff"/>
-            </svg>
-          </div>
-        </a>
-        <div class="yt-card-info"><h3>Health Tip #3</h3></div>
-      </div>
-
-      <div class="yt-card">
-        <a class="yt-card-thumb" href="https://youtube.com/shorts/4Ex6w8eKMQA" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.ytimg.com/vi/4Ex6w8eKMQA/hqdefault.jpg" alt="Health Tip #4" loading="lazy">
-          <div class="yt-play-btn">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/>
-              <path d="M23 20l14 8-14 8V20z" fill="#fff"/>
-            </svg>
-          </div>
-        </a>
-        <div class="yt-card-info"><h3>Health Tip #4</h3></div>
-      </div>
-
-      <div class="yt-card">
-        <a class="yt-card-thumb" href="https://youtube.com/shorts/x_UEl9ifDJ0" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.ytimg.com/vi/x_UEl9ifDJ0/hqdefault.jpg" alt="Health Tip #5" loading="lazy">
-          <div class="yt-play-btn">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/>
-              <path d="M23 20l14 8-14 8V20z" fill="#fff"/>
-            </svg>
-          </div>
-        </a>
-        <div class="yt-card-info"><h3>Health Tip #5</h3></div>
-      </div>
-
-      <div class="yt-card">
-        <a class="yt-card-thumb" href="https://youtube.com/shorts/Mjf4TQLFw1I" target="_blank" rel="noopener noreferrer">
-          <img src="https://i.ytimg.com/vi/Mjf4TQLFw1I/hqdefault.jpg" alt="Health Tip #6" loading="lazy">
-          <div class="yt-play-btn">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/>
-              <path d="M23 20l14 8-14 8V20z" fill="#fff"/>
-            </svg>
-          </div>
-        </a>
-        <div class="yt-card-info"><h3>Health Tip #6</h3></div>
-      </div>
-
-    </div>
-
-    <div class="yt-cta">
-      <a class="btn-yt" href="https://youtube.com/@rehab_recover_health" target="_blank" rel="noopener noreferrer">
-        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.543 2.498A2.763 2.763 0 0 0 19.6.52C17.903 0 11 0 11 0S4.097 0 2.4.52A2.763 2.763 0 0 0 .457 2.498C0 4.228 0 7.84 0 7.84s0 3.612.457 5.342A2.763 2.763 0 0 0 2.4 15.16C4.097 15.68 11 15.68 11 15.68s6.903 0 8.6-.52a2.763 2.763 0 0 0 1.943-1.978C22 11.452 22 7.84 22 7.84s0-3.612-.457-5.342Z" fill="#FF0000"/><path d="M8.8 11.2V4.48l5.76 3.36-5.76 3.36Z" fill="#fff"/></svg>
-        View all videos on YouTube
-      </a>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="footer-inner">
     <p style="display:flex;align-items:center;gap:10px"><img src="data:image/jpeg;base64,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" alt="RRH logo" style="width:40px;height:40px;border-radius:50%;object-fit:contain;background:#fff">Rehab·Recover·Health</p>
@@ -1062,5 +939,3 @@ btn.onclick=toggle;document.getElementById('bcX').onclick=toggle;
 </script>
 </body>
 </html>
-
-i want to add this video section which is on youtube and i want to add it after Consultations section
