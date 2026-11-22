@@ -434,6 +434,36 @@ h1,h2,h3,p,li,a,span,blockquote{overflow-wrap:break-word;word-break:normal}
   .doctor-head > div{min-width:0}
   .brand{font-size:1rem}
 }
+
+/* ---- YouTube section ---- */
+/* ---- YouTube slider ---- */
+.yt-section{max-width:72rem;margin:0 auto;padding:6rem 1.25rem;}
+.yt-slider-wrap{position:relative;margin-top:3rem;}
+.yt-slider{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:.5rem;}
+.yt-slider::-webkit-scrollbar{display:none;}
+.yt-card{flex:0 0 calc(85% - .625rem);scroll-snap-align:start;border-radius:1.25rem;overflow:hidden;border:1px solid var(--border);background:var(--card);}
+@media(min-width:540px){.yt-card{flex:0 0 calc(50% - .625rem);}}
+@media(min-width:900px){.yt-card{flex:0 0 calc(33.333% - .833rem);}}
+.yt-card-thumb{position:relative;display:block;aspect-ratio:9/16;overflow:hidden;background:#000;}
+.yt-card-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
+.yt-card-thumb:hover img{transform:scale(1.04);}
+.yt-play-btn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+.yt-play-btn svg{filter:drop-shadow(0 2px 8px rgba(0,0,0,.5));transition:transform .2s;}
+.yt-card-thumb:hover .yt-play-btn svg{transform:scale(1.12);}
+.yt-card-info{padding:1rem 1.25rem 1.25rem;}
+.yt-card-info h3{font-size:.9375rem;font-weight:600;line-height:1.4;color:var(--foreground);}
+/* nav arrows */
+.yt-nav{display:flex;align-items:center;justify-content:center;gap:.75rem;margin-top:1.75rem;}
+.yt-arrow{width:2.5rem;height:2.5rem;border-radius:50%;border:1.5px solid var(--border);background:var(--card);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s;flex-shrink:0;}
+.yt-arrow:hover{background:var(--primary);border-color:var(--primary);}
+.yt-arrow:hover svg{stroke:#fff;}
+.yt-arrow svg{stroke:var(--foreground);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.yt-dots{display:flex;gap:.4rem;}
+.yt-dot{width:.5rem;height:.5rem;border-radius:50%;background:var(--border);border:none;padding:0;cursor:pointer;transition:background .2s,transform .2s;}
+.yt-dot.active{background:var(--primary);transform:scale(1.3);}
+.yt-cta{margin-top:2rem;display:flex;justify-content:center;}
+.btn-yt{background:#FF0000;color:#fff;display:inline-flex;align-items:center;gap:.6rem;border-radius:999px;padding:.75rem 1.75rem;font-weight:700;font-size:.9375rem;text-decoration:none;transition:opacity .15s;}
+.btn-yt:hover{opacity:.85;}
 </style>
 </head>
 <body>
@@ -444,6 +474,7 @@ h1,h2,h3,p,li,a,span,blockquote{overflow-wrap:break-word;word-break:normal}
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#consultations">Consultations</a>
+          <a href="#videos">Videos</a>
       <a href="#services">Services</a>
       <a href="#how">How it works</a>
       <a href="#fees">Fees</a>
@@ -461,6 +492,7 @@ h1,h2,h3,p,li,a,span,blockquote{overflow-wrap:break-word;word-break:normal}
   <div class="mobile-menu" id="mobileMenu" style="display:none">
     <a href="#about">About</a>
       <a href="#consultations">Consultations</a>
+    <a href="#videos">Videos</a>
     <a href="#services">Services</a>
     <a href="#how">How it works</a>
     <a href="#fees">Fees</a>
@@ -527,6 +559,88 @@ h1,h2,h3,p,li,a,span,blockquote{overflow-wrap:break-word;word-break:normal}
     </div>
   </div>
 </section>
+
+<section id="videos">
+  <div class="yt-section">
+    <p class="eyebrow">Our Channel</p>
+    <h2>Health Videos on YouTube</h2>
+    <p style="margin-top:.75rem;color:var(--muted-foreground);max-width:40rem;">
+      Watch expert tips on physiotherapy, chronic disease management, nutrition and rehabilitation — from Dr Savan Kukadia and Dr Roshani Tank.
+    </p>
+    <div class="yt-slider-wrap">
+      <div class="yt-slider" id="ytSlider">
+
+        <div class="yt-card">
+          <a class="yt-card-thumb" href="https://youtube.com/shorts/Qy9-Zh3JbYg" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.ytimg.com/vi/Qy9-Zh3JbYg/hqdefault.jpg" alt="Health Tip #1" loading="lazy">
+            <div class="yt-play-btn"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/><path d="M23 20l14 8-14 8V20z" fill="#fff"/></svg></div>
+          </a>
+          <div class="yt-card-info"><h3>Health Tip #1</h3></div>
+        </div>
+
+        <div class="yt-card">
+          <a class="yt-card-thumb" href="https://youtube.com/shorts/FHZ4WHeCDjY" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.ytimg.com/vi/FHZ4WHeCDjY/hqdefault.jpg" alt="Health Tip #2" loading="lazy">
+            <div class="yt-play-btn"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/><path d="M23 20l14 8-14 8V20z" fill="#fff"/></svg></div>
+          </a>
+          <div class="yt-card-info"><h3>Health Tip #2</h3></div>
+        </div>
+
+        <div class="yt-card">
+          <a class="yt-card-thumb" href="https://youtube.com/shorts/IlqT9VQZDIo" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.ytimg.com/vi/IlqT9VQZDIo/hqdefault.jpg" alt="Health Tip #3" loading="lazy">
+            <div class="yt-play-btn"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/><path d="M23 20l14 8-14 8V20z" fill="#fff"/></svg></div>
+          </a>
+          <div class="yt-card-info"><h3>Health Tip #3</h3></div>
+        </div>
+
+        <div class="yt-card">
+          <a class="yt-card-thumb" href="https://youtube.com/shorts/4Ex6w8eKMQA" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.ytimg.com/vi/4Ex6w8eKMQA/hqdefault.jpg" alt="Health Tip #4" loading="lazy">
+            <div class="yt-play-btn"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/><path d="M23 20l14 8-14 8V20z" fill="#fff"/></svg></div>
+          </a>
+          <div class="yt-card-info"><h3>Health Tip #4</h3></div>
+        </div>
+
+        <div class="yt-card">
+          <a class="yt-card-thumb" href="https://youtube.com/shorts/x_UEl9ifDJ0" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.ytimg.com/vi/x_UEl9ifDJ0/hqdefault.jpg" alt="Health Tip #5" loading="lazy">
+            <div class="yt-play-btn"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/><path d="M23 20l14 8-14 8V20z" fill="#fff"/></svg></div>
+          </a>
+          <div class="yt-card-info"><h3>Health Tip #5</h3></div>
+        </div>
+
+        <div class="yt-card">
+          <a class="yt-card-thumb" href="https://youtube.com/shorts/Mjf4TQLFw1I" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.ytimg.com/vi/Mjf4TQLFw1I/hqdefault.jpg" alt="Health Tip #6" loading="lazy">
+            <div class="yt-play-btn"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#FF0000" opacity="0.92"/><path d="M23 20l14 8-14 8V20z" fill="#fff"/></svg></div>
+          </a>
+          <div class="yt-card-info"><h3>Health Tip #6</h3></div>
+        </div>
+
+      </div>
+
+      <!-- arrows + dots -->
+      <div class="yt-nav">
+        <button class="yt-arrow" id="ytPrev" aria-label="Previous video">
+          <svg width="18" height="18" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="yt-dots" id="ytDots"></div>
+        <button class="yt-arrow" id="ytNext" aria-label="Next video">
+          <svg width="18" height="18" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="yt-cta">
+      <a class="btn-yt" href="https://youtube.com/@rehab_recover_health" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.543 2.498A2.763 2.763 0 0 0 19.6.52C17.903 0 11 0 11 0S4.097 0 2.4.52A2.763 2.763 0 0 0 .457 2.498C0 4.228 0 7.84 0 7.84s0 3.612.457 5.342A2.763 2.763 0 0 0 2.4 15.16C4.097 15.68 11 15.68 11 15.68s6.903 0 8.6-.52a2.763 2.763 0 0 0 1.943-1.978C22 11.452 22 7.84 22 7.84s0-3.612-.457-5.342Z" fill="#FF0000"/><path d="M8.8 11.2V4.48l5.76 3.36-5.76 3.36Z" fill="#fff"/></svg>
+        View all videos on YouTube
+      </a>
+    </div>
+  </div>
+</section>
+
 
 <section id="contact" class="block wrap">
   <div class="contact-card">
@@ -937,5 +1051,61 @@ function toggle(){var o=win.classList.toggle('open');btn.innerHTML=o?'&times; <s
 btn.onclick=toggle;document.getElementById('bcX').onclick=toggle;
 })();
 </script>
+<script>
+(function(){
+  var slider = document.getElementById('ytSlider');
+  var dotsWrap = document.getElementById('ytDots');
+  var prevBtn = document.getElementById('ytPrev');
+  var nextBtn = document.getElementById('ytNext');
+  if(!slider) return;
+
+  var cards = slider.querySelectorAll('.yt-card');
+  var total = cards.length;
+  var current = 0;
+
+  // Build dots
+  cards.forEach(function(_,i){
+    var d = document.createElement('button');
+    d.className = 'yt-dot' + (i===0?' active':'');
+    d.setAttribute('aria-label','Video '+(i+1));
+    d.addEventListener('click', function(){ scrollTo(i); });
+    dotsWrap.appendChild(d);
+  });
+
+  function visibleCount(){
+    var w = slider.offsetWidth;
+    if(w >= 900) return 3;
+    if(w >= 540) return 2;
+    return 1;
+  }
+
+  function scrollTo(idx){
+    var vis = visibleCount();
+    var max = total - vis;
+    idx = Math.max(0, Math.min(idx, max));
+    current = idx;
+    var cardWidth = cards[0].offsetWidth + 20; // gap 1.25rem≈20px
+    slider.scrollTo({left: cardWidth * idx, behavior:'smooth'});
+    updateDots();
+  }
+
+  function updateDots(){
+    var dots = dotsWrap.querySelectorAll('.yt-dot');
+    var vis = visibleCount();
+    var active = Math.round(slider.scrollLeft / (cards[0].offsetWidth + 20));
+    dots.forEach(function(d,i){ d.classList.toggle('active', i===active); });
+  }
+
+  prevBtn.addEventListener('click', function(){ scrollTo(current - 1); });
+  nextBtn.addEventListener('click', function(){ scrollTo(current + 1); });
+
+  slider.addEventListener('scroll', function(){
+    clearTimeout(slider._st);
+    slider._st = setTimeout(updateDots, 80);
+  });
+})();
+</script>
 </body>
 </html>
+
+i want to add this video section which is on youtube and i want to add it after Consultations section
